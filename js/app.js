@@ -116,13 +116,13 @@ const inventors = [
   // Array.prototype.find()
   // 10. Find the comment with the id of 823423
   const findComment = comments.find((comments) => comments.id === 823423);
-  
-  
+  console.log(findComment)
+  console.log('10 completed')
   // Array.prototype.findIndex()
   // 11. Find the index of the comment with an id of 123523
-  const findCommentIdx = comments.findIndex((comment) => comments.id === 123523);
-  
-  
+  const findCommentIdx = comments.findIndex((comment) => comment.id === 123523);
+  console.log(findCommentIdx)
+  console.log('11 completed')
   //Verify console.log Output
 //   [ { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
 //     { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 } ]
