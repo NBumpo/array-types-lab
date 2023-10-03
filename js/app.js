@@ -96,8 +96,10 @@ const inventors = [
   // Array.prototype.some()
   // 8. Check if at least one person is 19 or older?
   // Hint: To get today's year, use the getFullYear method of new Date(), i.e., new Date().getFullYear()
-  
-  
+  const thisYear = new Date().getFullYear()
+  const oneNineteen = devs.some((dev) => dev.year < 2004)
+  console.log(oneNineteen)
+  console.log('8 completed')
   // Array.prototype.every()
   // 9. Check if everyone is 19 or older?
   const everyonenineteen = devs.every((dev) => dev.year < 2004)
