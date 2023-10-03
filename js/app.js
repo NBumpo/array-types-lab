@@ -100,9 +100,9 @@ const inventors = [
   
   // Array.prototype.every()
   // 9. Check if everyone is 19 or older?
-  
-  
-  
+  const everyonenineteen = devs.every((dev) => dev.year < 2004)
+  console.log(everyonenineteen)
+  console.log('9 completed')
   const comments = [
     { text: 'Love this!', id: 523423 },
     { text: 'Super good', id: 823423 },
