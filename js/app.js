@@ -15,30 +15,35 @@ const inventors = [
   
   // Array.prototype.filter()
   // 1. Filter the array of inventors into a new array containing only the inventors born in the 1500's
-   const fifteenHundreds = inventors.filter((num) => passed > 1600)
-  
+   const fifteenFilter = inventors.filter((inventor) => inventor.year <= 1599)
+   console.log(fifteenFilter)
+    console.log('1 completed')
   
   // Array.prototype.map()
   // 2. Map the array of the inventors into a new array containing objects with just the first and last names as properties
   // Hint:  Return a new object literal from the callback (don't mutate the object being passed in to map)
-  
+  const firstLast = inventors.map
   
   
   // Array.prototype.sort()
   // 3. Sort the inventors by birth date (year property), in ascending order
-  inventors.sort(inventors.passed)
-  console.log(inventors.sort)
+//   function orderNumbers(a, b) {
+//     return a - b;
+//   }
+//   inventors.join()
+//   const yearSort = inventors.sort(orderNumbers)
+//   console.log(yearSort)
   
   
   // Array.prototype.find()
   // 4. Find the inventor object with the first name of 'Ada'
-  const adaFind = inventors.find((inventor) => inventors.first === 'Ada');
-  
-  
+  const adaFind = inventors.find((inventor) => inventor.first === 'Ada');
+  console.log(adaFind)
+  console.log('4 completed')
   // Array.prototype.reduce()
   // 5. How many years did all the inventors live?
   const sumYears = inventors.reduce((acc, num) => acc + num, 0);
-  
+  console.log(sumYears)
   
   
   const people = [
@@ -58,9 +63,11 @@ const inventors = [
   // Array.prototype.map()
   // 6. Map the people array such that the new array consists of strings with the names formatted as "First Last", e.g., "Becker, Carl" should be mapped to "Carl Becker".
   // Hint: As a start, consider using the String.prototype.split method to "split" the string using ', ' as the separator
-  
-  
-  
+  const firstLastPeople = people.map((person) => {
+    const splitArray = person.split(', ')
+    return splitArray.reverse().join(' ')
+  })
+  console.log(firstLastPeople)
   
   const data = [
     'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van',
@@ -70,9 +77,15 @@ const inventors = [
   // Array.prototype.reduce()
   // 7. Count the number of instances for each of the data items. The reduce should return an object where the keys are 'car', 'truck', etc. and the values are the count.
   // Hint: Since you want to return an object, be sure to pass an empty {} for the initial value of the "accumulator".
+//   const returnCarTruck = data.reduce((acc, 'car', 'truck') => acc + num, 0);
   
-  
-  
+//   const returnCarTruck = data.reduce((runningTally, vote) =>{
+   
+//     runningTally[vote] = runningTally[vote] ? runningTally[vote] + 1 : 1
+//     return runningTally
+// }, {})
+
+
   const devs = [
     { name: 'Wes', year: 1988 },
     { name: 'Kait', year: 1986 },
